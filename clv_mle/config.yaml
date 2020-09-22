@@ -18,6 +18,6 @@ trainingInput:
   workerType: n1-highcpu-16
   parameterServerType: n1-highmem-8
   evaluatorType: n1-highcpu-16
-  workerCount: 9
-  parameterServerCount: 3
+  workerCount: 3
+  parameterServerCount: 1
   evaluatorCount: 1
