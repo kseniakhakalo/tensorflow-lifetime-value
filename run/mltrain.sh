@@ -84,10 +84,10 @@ elif [[ ${TRAIN_JOB} == "train" ]]; then
 
   ARGS="--data-src ${BUCKET}/data --verbose-logging $@"
 
-  gcloud beta ml-engine jobs submit training ${JOB_NAME} \
+  gcloud beta ai-platform jobs submit training ${JOB_NAME} \
     --job-dir ${BUCKET}/jobs/${JOB_NAME} \
     --region $REGION \
-    --scale-tier=CUSTOM \
+    --scale-tier=BASIC \
     --module-name trainer.task \
     --package-path clv_mle/trainer \
     --config clv_mle/config.yaml \
