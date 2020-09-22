@@ -78,7 +78,7 @@ def dataset_input_fn(data_folder, prefix=None, mode=None, params=None, count=Non
 
   # Read CSV files into a Dataset
   filenames = tf.matching_files('{}{}*.csv'.format(data_folder, prefix))
-  dataset = tf.data.TextLineDataset(filenames)
+  dataset = tf.data.TextLineDataset(filenames, header=True)
 
   # Parse the record into tensors.
   dataset = dataset.map(parse_csv)
