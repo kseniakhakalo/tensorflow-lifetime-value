@@ -30,7 +30,7 @@ export PATH=~/miniconda2/bin:$PATH
 ```
 conda create -y -n clv
 source activate clv
-conda install -y -n clv python=2.7 pip
+conda install -y -n clv python=3.6 pip
 pip install -r requirements.txt
 ```
 
@@ -47,7 +47,7 @@ Before running the training and Airflow scripts, you need some environment varia
 ```
 export PROJECT=$(gcloud config get-value project 2> /dev/null)
 export BUCKET=gs://${PROJECT}_data_final
-export REGION=us-central1
+export REGION=europe-west1
 export DATASET_NAME=ltv
 
 export COMPOSER_NAME="clv-final"
