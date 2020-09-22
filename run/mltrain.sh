@@ -87,8 +87,6 @@ elif [[ ${TRAIN_JOB} == "train" ]]; then
   gcloud beta ai-platform jobs submit training ${JOB_NAME} \
     --job-dir ${BUCKET}/jobs/${JOB_NAME} \
     --region $REGION \
-    --scale-tier=CUSTOM \
-    --master-machine-type e2-standard-8 \
     --module-name trainer.task \
     --package-path clv_mle/trainer \
     --config clv_mle/config.yaml \
