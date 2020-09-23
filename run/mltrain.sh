@@ -104,7 +104,6 @@ elif [[ $TRAIN_JOB == "tune" ]]; then
   gcloud beta ml-engine jobs submit training ${JOB_NAME} \
     --job-dir ${BUCKET}/jobs/${JOB_NAME} \
     --region ${REGION} \
-    --scale-tier=CUSTOM \
     --module-name trainer.task \
     --package-path clv_mle/trainer \
     --config ${CONFIG_TUNE} \
